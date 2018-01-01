@@ -1,0 +1,23 @@
+<div class="container">
+	<button class="view_type blue darken-2" (click)="viewTypeToggle()">{{viewType()}}</button>
+	<div class="blue darken-3 header">
+		<label>업비트 코인 시세 정보</label>
+	</div>
+	<div class="search">
+		<form [formGroup]="coinForm" novalidate>
+			<input type="text" class="api_coin" placeholder="coin" formControlName="coin">
+			<button class="waves-effect waves-light btn togglebtn blue darken-2" (click)="onAdd()">추가/삭제</button>
+		</form>
+	</div>
+	<div class="wrapper" *ngIf="api_coin">
+		<table class="highlight">
+			<tbody>
+				<tr *ngFor="let coin of coin_data">
+					<td class="bold">{{getRealName(coin["code"])}}({{coin["code"].split("-")[1]}})</td>
+					<td>{{view_type === "KRW" ? krw_convert(coin["tradePrice"]) : coin["tradePrice"].toFixed(8)}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="nodata card-panel lighten-2 blue darken-2" *ngIf="api_coin.length === 0">등록된 코인이 없습니다.</div>
+</div>

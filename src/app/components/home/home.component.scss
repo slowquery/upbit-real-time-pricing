@@ -1,0 +1,75 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+.container {
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 100%;
+  text-align: center;
+  h1 {
+    margin: .5em;
+  }
+  .header {
+    padding: .35em 0;
+    label {
+      font-size: 18px;
+      color: #FFF;
+      font-weight: bold;
+    }
+  }
+  .view_type {
+    padding: .5em 1em;
+    position: absolute;
+    right: 0;
+    top: 37px;
+    border: 0;
+    color: #FFF;
+    font-weight: bold;
+  }
+  .search {
+    width: 50%;
+    margin: auto;
+    padding: 1em 0;
+    .api_coin {
+      width: 40px;
+      text-align: center;
+      margin: 0 2px;
+      padding-top: 2px;
+      padding-bottom: 0;
+      float: left;
+    }
+    input[type=text]:focus {
+      outline: none;
+      box-shadow: 0px 1px 0px 0px #1976d2, 0px 1px 0px 0px #1976d2;
+    }
+    .togglebtn {
+      padding: 0 14px;
+      position: relative;
+      top: 8px;
+      float: right;
+    }
+  }
+  .nodata {
+    padding: 5% 0;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    top: 34px;
+    color: #FFF;
+    font-size: 16px;
+  }
+  .wrapper {
+    text-align: center;
+    width: 82%;
+    margin: 24px auto;
+    clear: both;
+    position: relative;
+    top: 20px;
+    .coin {
+      text-align: left;
+    }
+    td, th {
+      padding: 5px 0px !important;
+    }
+    .bold {
+      font-weight: bold;
+    }
+  }
+}
